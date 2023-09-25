@@ -1,6 +1,6 @@
 <?php
 
-namespace TeldsShop\controllers;
+namespace TeldsShop\Controllers;
 
 use TeldsShop\models\usersClass;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace TeldsShop\controllers;
+namespace TeldsShop\Controllers;
 
 use TeldsShop\App\Routing;
-use TeldsShop\src\models\CartsClass;
-use TeldsShop\src\models\ProductsClass;
+use TeldsShop\models\CartsClass;
+use TeldsShop\models\ProductsClass;
 
 class CartAction extends A_Controller
 {

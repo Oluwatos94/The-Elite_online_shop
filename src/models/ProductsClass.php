@@ -1,6 +1,6 @@
 <?php
 
-namespace TeldsShop\src\models;
+namespace TeldsShop\models;
 
 use TeldsShop\models\A_Model;
 
@@ -72,11 +72,11 @@ class ProductsClass extends A_Model
 
     public function findAll(): array
     {
-        // TODO: Implement findAll() method.
+        return [];
     }
     public function insert(array $values): bool
     {
-        // TODO: Implement insert() method.
+        return true;
     }
 
     /**

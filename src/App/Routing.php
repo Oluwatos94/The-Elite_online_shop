@@ -40,8 +40,8 @@ class Routing
      */
     public static function executePath(): void
     {
-        $route = $_SERVER['REQUEST_METHOD'];
-        $method = $_SERVER['REQUEST_URI'];
+        $method = strtolower($_SERVER['REQUEST_METHOD']);
+        $route = strtolower($_SERVER['REQUEST_URI']);
 
         $indexName = md5($method . $route);
         if(array_key_exists($indexName, self::$routes)){

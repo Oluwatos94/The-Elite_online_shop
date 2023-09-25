@@ -1,7 +1,7 @@
 <?php
 
-namespace TeldsShop\controllers;
-use TeldsShop\src\models\productsClass;
+namespace TeldsShop\Controllers;
+use TeldsShop\models\productsClass;
 
 class MainPageController extends A_Controller
 {
@@ -13,7 +13,7 @@ class MainPageController extends A_Controller
      */
     protected function indexAction(): void
     {
-        $products = new productsClass();
+        $products = new ProductsClass();
         $productItems = $products->findAll();
         $productItems = array_slice($productItems, "0", self::NUMBER_ITEMS_DISPLAYED_ON_HOME_PAGE);
         $this->dataRendering['product'] = $productItems;

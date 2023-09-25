@@ -1,6 +1,6 @@
 <?php
 
-namespace TeldsShop\src\models;
+namespace TeldsShop\models;
 
 use TeldsShop\models\A_Model;
 

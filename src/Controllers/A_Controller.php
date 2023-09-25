@@ -1,8 +1,8 @@
 <?php
 
-namespace TeldsShop\controllers;
-use TeldsShop\app\View;
-use TeldsShop\src\models\CartsClass;
+namespace TeldsShop\Controllers;
+use TeldsShop\App\View;
+use TeldsShop\models\CartsClass;
 
 abstract class A_Controller implements I_Controller
 {
@@ -12,6 +12,19 @@ abstract class A_Controller implements I_Controller
     {
         $this->view = $view;
         $this->dataRendering['page_title'] = ["Welcome to your home of shopping"];
+    }
+
+    public function __call($name, $args)
+    {
+        if (method_exists($this, $name)) {
+            //Input data validation
+
+            $this->view->setActionNameForViews(str_replace('Action', '', $name));
+            $classNameSpaceWithName = get_class($this);
+            $className = str_replace('TeldsShop\\Controllers\\', '', $classNameSpaceWithName);
+            $this->view->setClassNameForViews(str_replace('Controller', '', $className));
+            return call_user_func_array(array($this, $name), $args);
+        }
     }
 
     abstract protected function indexAction(): void;

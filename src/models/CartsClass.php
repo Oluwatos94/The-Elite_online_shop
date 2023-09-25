@@ -1,6 +1,6 @@
 <?php
 
-namespace TeldsShop\src\models;
+namespace TeldsShop\models;
 
 use TeldsShop\models\A_Model;
 
@@ -144,5 +144,10 @@ class CartsClass extends A_Model
             $result[] = $row;
         }
         return $result;
+    }
+
+    public function insert(array $values): bool
+    {
+        // TODO: Implement insert() method.
     }
 }

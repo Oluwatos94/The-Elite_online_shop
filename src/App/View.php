@@ -76,7 +76,7 @@ class View extends \stdClass
         } else {
             require_once __DIR__ . self::VIEWS_TEMPLATES_BANNER_SMALL_PHP;
         }
-        require_once self::VIEWS_TEMPLATES_CONTAINER_PHP;
+        require_once __DIR__.self::VIEWS_TEMPLATES_CONTAINER_PHP;
 
         $header = ob_get_contents();
         ob_clean();

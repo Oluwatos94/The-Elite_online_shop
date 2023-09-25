@@ -1,9 +1,9 @@
 <?php
 
-namespace TeldsShop\controllers;
+namespace TeldsShop\Controllers;
 
 use TeldsShop\App\Routing;
-use TeldsShop\src\models\productsClass;
+use TeldsShop\models\ProductsClass;
 
 class ProductsAction extends A_Controller
 {

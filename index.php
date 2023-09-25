@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 session_start();
-require_once __DIR__ . "/env/setting.php";
 require_once __DIR__ . "/vendor/autoload.php";
+require_once __DIR__ . "/env/setting.php";
 
 use TeldsShop\App\Routing;
 
-$pageControllerNameSpace = 'TeldsShop\controllers\MainPageController';
+$pageControllerNameSpace = 'TeldsShop\\Controllers\MainPageController';
 $cartControllerNameSpace = 'TeldsShop\\Controllers\\CartAction';
 $productsControllerNameSpace = 'TeldsShop\\Controllers\\ProductsAction';
 $usersControllerNameSpace = 'TeldsShop\\Controllers\\UsersAction';

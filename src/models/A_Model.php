@@ -2,7 +2,8 @@
 
 namespace TeldsShop\models;
 
-use TeldsShop\src\models\I_Model;
+
+use TeldsShop\models\I_Model;
 
 abstract class A_Model implements I_Model
 {
